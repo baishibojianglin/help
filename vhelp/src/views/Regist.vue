@@ -7,6 +7,7 @@
 		</van-row>
 		<van-cell-group>
             <van-field v-model="username" placeholder="请输入用户名" />
+			<van-field type="password" v-model="password" placeholder="请输入用户名" />
 		</van-cell-group>
 	</div>
 </template>
@@ -29,7 +30,8 @@ export default {
 	data:function(){
 		return {
 			logo:require('../assets/images/logo.png'),
-			username:''
+			username:'',
+			password:''
 		}
 	},
 	components:{
