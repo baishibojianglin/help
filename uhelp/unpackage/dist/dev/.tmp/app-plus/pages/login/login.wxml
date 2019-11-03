@@ -1,0 +1,1 @@
+<view class="content"><image class="logo" src="/static/logo.png"></image><view class="inputcontent"><text class="icon iconcolor"></text><input type="number" placeholder="输手机号码"/></view><view class="inputcontent"><text class="icon iconcolor"></text><input type="number" placeholder="输用户密码"/></view><navigator class="forgetpassword">忘记密码？找回密码</navigator></view>
