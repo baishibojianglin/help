@@ -1,12 +1,13 @@
 <?php
 namespace app\matchmaker\controller;
+use think\Request;
 
 
-class Login extends Common
+class Login
 {
     public function login()
     {
-       $data=[1,2];
+       $data=$_POST['text'];
        return json($data);
     }
 }

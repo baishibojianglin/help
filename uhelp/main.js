@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 Vue.config.productionTip = false
-Vue.prototype.$url = 'http://countryside.com/index.php/';
+Vue.prototype.$url = 'http://www.countryside.com/index.php/';
 
 App.mpType = 'app'
 

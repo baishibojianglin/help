@@ -17,6 +17,8 @@
 </template>
 
 <script>
+	import aesjs from '@/common/js/aes.js'
+	
 	export default {
 		components:{
 		
@@ -32,21 +34,19 @@
 		},
 		methods: {
            login(){
+			  //console.log(aesjs.Encrypt('name'));
+			  //console.log(aesjs.Decrypt('ira5/Ould9JMaucorRjumg=='));
 			   uni.request({
 			       url:this.$url+'login', 
 			       data: {
-			           text: 'test'
+			           text:'name'
 			       },
+				   method:'POST',
 				   header: {
-						'sign': 'aa', // 签名
-						'version':'bb', // 应用大版本号
-						'model': 'cc', // 手机型号
-						'apptype': 'dd', // 客户端平台
-						'did': '12345dg', // 设备号
+                       'content-type':'application/x-www-form-urlencoded'
 					},
 			       success: (res) => {
 			           console.log(res.data);
-			           this.text = 'request success';
 			       }
 			   });
 		   }

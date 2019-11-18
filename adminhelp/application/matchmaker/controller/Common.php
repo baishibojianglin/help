@@ -13,18 +13,23 @@ class Common
    //检查客户端请求
     public function checkrequest(){
        $header=request()->header();
-
+       if(!empty($header['sign'])){
+         return json($header['sign']);
+       }else{
+         return 'sign不存在';
+       }
     }
 
     public function my(){
-       //$str='abc123';
-       $str='28a42139a9d95b72402b2877ad0e261e';
-       $key='dlst';
-      // return Aes::encrypt($str,$key);
-       //return (new Aes())->encrypt($str,$key);
        $aes=new Aes();
-
-       return $aes->decrypt($str,$key);
+       //$str='name=张三&age=25';
+       $str='d0afe8fe9f14e8c8cdcf8894260720d9413b1a6fc4b00016c64e3d1d87d8d2bd';
+       $key='dlst';
+       //return $aes->encrypt($str,$key);
+       //return $aes->decrypt($str,$key);
+       $data=$aes->decrypt($str,$key);
+       parse_str($data,$arry);
+       return json($arry);
     }
 
 }
