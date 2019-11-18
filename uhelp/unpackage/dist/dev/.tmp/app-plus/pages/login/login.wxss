@@ -50,4 +50,27 @@
 	font-size: 12px;
 	margin-top: 30px;
 }
+.buttoncon{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:row;
+	    -ms-flex-direction:row;
+	        flex-direction:row;
+	width: 90%;
+	text-align:center;
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	margin-top: 35px;
+}
+.loginbutton{
+	width: 100%;
+	background-color: #E84242;
+	color:#fff;
+}
 

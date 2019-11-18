@@ -24,7 +24,7 @@
   },
   "plus": {
     "useragent": {
-      "value": "uni-app appservice",
+      "value": "uni-app",
       "concatenate": true
     },
     "splashscreen": {
@@ -37,7 +37,8 @@
     "launchwebview": {
       "render": "always",
       "id": "1",
-      "kernel": "WKWebview"
+      "kernel": "WKWebview",
+      "uni-app": "auto"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -84,7 +85,7 @@
     },
     "allowsInlineMediaPlayback": true,
     "uni-app": {
-      "compilerVersion": "2.3.3",
+      "compilerVersion": "2.3.7",
       "control": "v8",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
