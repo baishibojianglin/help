@@ -34,6 +34,7 @@
 		},
 		methods: {
            login(){
+<<<<<<< HEAD
                let value='phone='+this.phone+'&password='+this.password;
 			   let str=aesjs.Encrypt(value);
 			   uni.request({
@@ -49,6 +50,23 @@
 			           console.log(res.data);
 			       }
 			   });
+=======
+			  //console.log(aesjs.Encrypt('name'));
+			  console.log( aesjs.Decrypt('t2sMcWVastybKsQpuGRYjA==') );
+			  //  uni.request({
+			  //      url:this.$url+'login', 
+			  //      data: {
+			  //          text:'name'
+			  //      },
+				 //   method:'POST',
+				 //   header: {
+     //                   'content-type':'application/x-www-form-urlencoded'
+					// },
+			  //      success: (res) => {
+			  //          console.log(res.data);
+			  //      }
+			  //  });
+>>>>>>> 565686796cf66333febd7eb74cf6dfede91ea719
 		   }
 		}
 	}
