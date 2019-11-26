@@ -35,20 +35,21 @@
 		methods: {
            login(){
 			  //console.log(aesjs.Encrypt('name'));
-			  console.log( aesjs.Decrypt('t2sMcWVastybKsQpuGRYjA==') );
-			  //  uni.request({
-			  //      url:this.$url+'login', 
-			  //      data: {
-			  //          text:'name'
-			  //      },
-				 //   method:'POST',
-				 //   header: {
-     //                   'content-type':'application/x-www-form-urlencoded'
-					// },
-			  //      success: (res) => {
-			  //          console.log(res.data);
-			  //      }
-			  //  });
+			  //console.log( aesjs.Decrypt(aesjs.Encrypt('name')) );
+			  var str=aesjs.Encrypt('name');
+			   uni.request({
+			       url:this.$url+'login', 
+			       data: {
+			           text:str
+			       },
+				   method:'POST',
+				   header: {
+                       'content-type':'application/x-www-form-urlencoded'
+					},
+			       success: (res) => {
+			           console.log(res.data);
+			       }
+			   });
 		   }
 		}
 	}
