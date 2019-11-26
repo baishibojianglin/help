@@ -3,6 +3,11 @@
 namespace app\common\lib;
 
 class AES {
+    /**
+     *密钥
+     */
+    public $key='1234123412341234';
+    
 
     /**
      * aes加密
@@ -10,10 +15,10 @@ class AES {
      * @param string $key 密钥
      * @return string
      */
-    public function encrypt($string, $key)
+    public function encrypt($string)
     {
-        $data = openssl_encrypt($string, 'AES-128-ECB', $key, OPENSSL_RAW_DATA);
-        $data = strtolower(bin2hex($data));
+        $data = openssl_encrypt($string, 'AES-128-ECB', $this->key, OPENSSL_RAW_DATA);
+        $data = strtolower(base64_decode($data));
         return $data;
     }
 
@@ -24,9 +29,10 @@ class AES {
      * @param string $key 密钥
      * @return string
      */
-    public function decrypt($string, $key)
+    public function decrypt($string)
     {
-        $decrypted = openssl_decrypt(hex2bin($string), 'AES-128-ECB', $key, OPENSSL_RAW_DATA);
+        $decrypted = openssl_decrypt(base64_decode($string), 'AES-128-ECB', $this->key, OPENSSL_RAW_DATA);
         return $decrypted;
     }
+
 }
