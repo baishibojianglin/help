@@ -34,12 +34,13 @@
 		},
 		methods: {
            login(){
-      		  //console.log(aesjs.Encrypt('name'));
-			  //console.log(aesjs.Decrypt('ira5/Ould9JMaucorRjumg=='));
+
+               let value='phone='+this.phone+'&password='+this.password;
+			   let str=aesjs.Encrypt(value);
 			   uni.request({
 			       url:this.$url+'login', 
 			       data: {
-			           text:'name'
+			           'text':str
 			       },
 				   method:'POST',
 				   header: {
@@ -49,7 +50,9 @@
 			           console.log(res.data);
 			       }
 			   });
+
 		   }
+		   
 		}
 	}
 </script>
