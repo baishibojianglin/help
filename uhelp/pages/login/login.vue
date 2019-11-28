@@ -34,7 +34,7 @@
 		},
 		methods: {
            login(){
-			  //console.log(aesjs.Encrypt('name'));
+      		  //console.log(aesjs.Encrypt('name'));
 			  //console.log(aesjs.Decrypt('ira5/Ould9JMaucorRjumg=='));
 			   uni.request({
 			       url:this.$url+'login', 
