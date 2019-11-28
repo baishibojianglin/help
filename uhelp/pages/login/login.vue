@@ -34,17 +34,17 @@
 		},
 		methods: {
            login(){
-
                let value='phone='+this.phone+'&password='+this.password;
-			   var str=aesjs.Encrypt('name');
+			   let sign=aesjs.Encrypt(this.$sign);
 			   uni.request({
 			       url:this.$url+'login', 
 			       data: {
-			           text:str
+			           text:''
 			       },
 				   method:'POST',
 				   header: {
-                       'content-type':'application/x-www-form-urlencoded'
+                       'content-type':'application/x-www-form-urlencoded',
+					   'sign':sign
 					},
 			       success: (res) => {
 			           console.log(res.data);

@@ -8,21 +8,30 @@ use think\Request;
 
 class Common extends Controller
 {
-   //初始化执行的方法
+    /**
+     *初始化执行的方法
+     */
   	public function _initialize(){
-  		$this->checkrequest();  //调用检查客户端请求
+
+      //检查客户端请求
+  		$this->checkrequest();  
   	}
 
-   //检查客户端请求
+    /**
+     *检查客户端请求
+     */
     public function checkrequest(){
+
        $header=request()->header();
-       //return false;
-       var_dump($header);
-       // if(!empty($header['sign'])){
-       //   return json($header['sign']);
-       // }else{
-       //   return 'sign不存在';
-       // }
+       if(empty($header['sign'])){
+         return false; 
+       }else{
+         $aes=new Aes();
+         $data=$aes->decrypt($header['sign']);
+         var_dump($data);
+         exit;       
+       }
+       
     }
 
 

@@ -6,7 +6,7 @@ class AES {
     /**
      *密钥
      */
-    public $key='1234123412341234';
+    public $key='123a456b789c123d';
     
 
     /**
