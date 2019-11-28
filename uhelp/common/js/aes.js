@@ -1,7 +1,6 @@
 import CryptoJS from '@/node_modules/crypto-js/crypto-js.js';
-var key = CryptoJS.enc.Utf8.parse("1234123412341234");
-var iv = "1234567812345678";
-
+const key = CryptoJS.enc.Utf8.parse("123a456b789c123d");
+const iv = "1234567812345678";
 
 //加密方法
 function Encrypt(word) {
