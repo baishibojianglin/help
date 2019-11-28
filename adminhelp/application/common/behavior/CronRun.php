@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: LiuYang
- * Date: 2017/3/9
- * Time: 19:37
- */
-
 namespace app\common\behavior;
 
 use think\Exception;
@@ -13,6 +6,7 @@ use think\Response;
 
 class CronRun
 {
+
     public function run(&$dispatch){
         $host_name = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : "*";
         $headers = [
@@ -28,4 +22,5 @@ class CronRun
             $dispatch['response'] = $response;
         }
     }
+
 }

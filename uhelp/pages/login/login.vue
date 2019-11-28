@@ -58,13 +58,12 @@
 </script>
 
 <style>
-.content {
+.content{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
-
 .logo {
 	height: 200rpx;
 	width: 200rpx;

@@ -9,7 +9,7 @@ class Login extends Common
 {
     public function login()
     {
-
+         return '1243';
           // $str=input();
           // $key='1234123412341234';
           // $aes=new Aes();
