@@ -19,9 +19,14 @@ class Login extends Common
            //密码md5加密
            $data['password']=md5($data['password']).'dlst';
 
-           $matchuser=new Matchuser();
-           $list=$matchuser->where('id',1)->find();
-           var_dump($list['phone']);
+
+
+           
+             $matchuser=new Matchuser();
+             $list=$matchuser->checklogin($data['phone'],$data['password']);
+             return json($list);
+
+
 
              
     }
